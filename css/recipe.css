@@ -1,19 +1,28 @@
 h1{
-    color: brown;
-    background-color: lightgray;
+    color: #A4A400;
+    background-color: #F0F0F0;
     text-align: center;
     text-decoration: underline;
+    size: 22pt;
+    /* width: max-content; */
+    /* text-align: justify; */
+
+
 
 }
-
+.linkColor{
+    color: #A4A400;
+}
 h4{
     font-family: 'Times New Roman', Times, serif;
 }
 
 h3{
-    color: brown;
+    color: #A4A400;
     text-decoration: underline;
-    background-color: lightgray;
+    background-color: #F0F0F0;
+    size: 22pt;
+    width: max-content;
 
 }
 p {
@@ -24,7 +33,13 @@ p {
 }
 
 #listCircleBullet{
-    list-style-type:circle;
+    /* list-style-type:circle; */
+    list-style-image: url('../image/pie_icon.gif');
+
+}
+ul.image{
+    list-style-image: url('../image/pie_icon.gif');
+
 }
 
 #line{
@@ -42,8 +57,13 @@ p {
 #underlineColor{
     text-decoration: underline;
     font-style: normal;
+    color: #A4A400;
 }
 
-a{
-    
+.right{
+    float: right;
+}
+
+body{
+    background: url("../image/silverware.jpg");
 }
