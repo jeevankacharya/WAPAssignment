@@ -1,0 +1,49 @@
+h1{
+    color: brown;
+    background-color: lightgray;
+    text-align: center;
+    text-decoration: underline;
+
+}
+
+h4{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h3{
+    color: brown;
+    text-decoration: underline;
+    background-color: lightgray;
+
+}
+p {
+    font-size : 16px;
+    padding : 0;
+    margin : 0;
+    line-height : 20px;
+}
+
+#listCircleBullet{
+    list-style-type:circle;
+}
+
+#line{
+    text-decoration: line-through;
+}
+
+#usercomment{
+   padding-block: 10px;
+   margin-right: 35px;
+   margin-left: 35px;
+   background: lightyellow;
+   font-style: oblique;
+}
+
+#underlineColor{
+    text-decoration: underline;
+    font-style: normal;
+}
+
+a{
+    
+}
