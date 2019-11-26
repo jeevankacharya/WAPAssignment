@@ -1,0 +1,46 @@
+.banner{
+    
+    width: 100%;
+
+}
+
+body{
+    background: url(../image/moviereview/background.png);
+}
+
+h1{
+    text-align: center;
+
+}
+.rotateimg180 {
+    -webkit-transform:rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+
+width: 100%;
+height: 80px;
+}
+
+.descriptionbackground{
+background-color: darkolivegreen;
+width: 250px;
+float: right;
+}
+
+.parent {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .image1 {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .image2 {
+    position: absolute;
+    top: 30px;
+    left: 70px;
+  }
