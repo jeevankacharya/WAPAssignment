@@ -1,7 +1,3 @@
-p {
-    font-family: sans-serif;
-    color: blue;
-}
 
 h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -12,43 +8,24 @@ h3 {
     font-family: monospace;
     color: blueviolet;
 }
-h6 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: white;
-}
+
 
 body {
     background-color: rgb(128,128,128);
     background-position: 370px 20px;
-}
-
-p {
     color: white;
 }
 
-p.italic {
-    font-style: italic;
-  }
-  
-hr {
+/* :horizontal rule for line drawing */
+/* hr {
     display: block;
     height: 0px;
     overflow: hidden;
     color: white;
     border-style: inset;
     border-width: 1px;
-}
+} */
 
-li{
-    color: white;
-}
-a{
-    color: red;
-}
-
-h6{
-    color: white;
-}
 
 #italic{
     font-style: italic;
@@ -56,20 +33,34 @@ h6{
 
 }
 
-/* Three image containers (use 25% for four, and 50% for two, etc) */
-.column {
-    float: left;
-    width: 50%;
-    padding: 5px;
+
+  /* disable the hover in link  */
+  a{
+    color: red;
+      text-decoration: none;
+  } 
+  a:hover {
+    text-decoration: underline;
   }
   
-  /* Clear floats after image containers */
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
+  a:hover {
+    cursor: text;
+    cursor: pointer;
+    
   }
+img{
+    position: relative;
+    height: 200px;
+    width: 200px;
+}
+.referer{
+    height: 70px !important;
+    width: 100px !important;
+}
 
-  * {
-    box-sizing: border-box;
-  }
+span{
+    color: yellow;
+}
+
+/* . class
+# :id */
