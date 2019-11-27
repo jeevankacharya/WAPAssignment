@@ -1,0 +1,39 @@
+.border{
+
+    width: 47%;
+    padding: 2%;
+    font-size: 8pt;
+    border:2px solid grey;
+    border-radius: 10px;
+    margin-left: 8px;
+}
+
+input{
+    margin-left: 16pt;
+}
+
+label.color{
+    color: red;
+}
+
+
+.background{
+    border: 2px solid grey  ;
+    border-radius: 2pt;
+    padding: 15pt;
+    background: moccasin;
+}
+button.background{
+    background: red;
+    padding: 3pt;
+}
+
+/* label {
+    clear:left;
+    text-align:right;
+    padding-right:10px;
+}
+
+input, label {
+    float: right;
+} */

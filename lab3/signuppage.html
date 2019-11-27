@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign Up</title>
+    <link href="../css/signup.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+
+
+    <img src="../image/signup/nerdluv.png">
+    <figcaption>where meek geeks meet</figcaption>
+
+    <h4>Welcome!</h4>
+
+    <div class="background">
+        <!-- Name -->
+        <!-- <label for="name"><strong>Name:</strong></label> -->
+        <strong>Name :</strong>
+        <input type="text" id="name" name="name" maxlength="16" placeholder="Your Name..">
+        <br>
+        <!-- Gender -->
+        <!-- <label for="gender"><strong>Gender:</strong></label> -->
+        <strong>Gender :</strong>
+
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <br>
+        <!-- Age -->
+        <!-- <label for="age"><strong>Age:</strong></label> -->
+        <strong>Age :</strong>
+        <input type="number" id="age" name="age" maxlength="2" placeholder="Your Age..">
+        <br>
+        <!-- Personality Type -->
+        <!-- <label for="Personality"><strong>Personality Type:</strong></label> -->
+        <strong>Personality Type:</strong>
+        <input type="text" id="Personality" name="Personality" maxlength="16" placeholder="Your Personality..">
+        <label> (<label class="color"><a href="http://www.humanmetrics.com/cgi-win/jtypes2.asp">Don't know your Type?</a></label>)</label>
+        <br>
+
+        <!-- Favourite OS -->
+        <!-- <label for="OS"><strong>Favourite OS:</strong></label> -->
+        <strong>Favourite OS:</strong>
+        <select>
+            <option value="windows">Windows</option>
+            <option value="linux">Linux</option>
+            <option value="mac">Mac</option>
+        </select>
+
+        <br>
+        <!-- Seeking age -->
+        <!-- <label for="seeking_age"><strong>Seeking Age : </strong></label> -->
+        <strong>Seeking Age : </strong>
+        <input type="number" id="min" name="min" placeholder="min" size="2"> to
+        <input type="number" id="max" name="max" placeholder="max" size="2">
+        <br>
+
+        <button class="background" type="button">Sign Up</button>
+    </div>
+</body>
+
+</html>
