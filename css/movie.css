@@ -44,3 +44,28 @@ float: right;
     top: 30px;
     left: 70px;
   }
+
+
+  span.a {
+    display: inline; /* the default for span */
+/* width: 100px;    height: 100px; */
+    padding: 5px;
+    border: 1px solid grey;
+  }
+  
+  span.b {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid grey;
+  }
+  
+  span.c {
+    display: block;
+    width: 500px;
+    height: 120px;
+    padding: 5px;
+    border: 1px solid grey;
+  }
+  
