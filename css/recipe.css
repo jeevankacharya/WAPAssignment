@@ -1,6 +1,5 @@
 h1{
     color: #A4A400;
-    background-color: #F0F0F0;
     text-align: center;
     text-decoration: underline;
     size: 22pt;
@@ -8,6 +7,11 @@ h1{
     /* text-align: justify; */
 
 
+
+}
+
+span{
+    background-color: #F0F0F0;
 
 }
 .linkColor{
@@ -66,4 +70,5 @@ ul.image{
 
 body{
     background: url("../image/silverware.jpg");
+    background-attachment: fixed;
 }
