@@ -8,32 +8,38 @@
 
 <body>
     <h1>Retrieve your grade</h1>
-    <p>Name: ...</p>
-    <p>Student ID: ...</p> Get Grade!
+    <!-- <p>Name: ...</p>
+    <p>Student ID: ...</p> Get Grade! -->
 
-    <form action="action_page" style="border:1px solid #ccc">
-            <div class="container">
-              
-          
-              <label for="Name"><b>Name</b></label>
-              <input type="text" placeholder="Enter Name" name="Name" required>
-              <label for="studentId"><b>Student Id</b></label>
-              <input type="number" placeholder="Enter studentId" name="studentId" required>
-          
-              
-              <label>
-                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-              </label>
-          
-              <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-          
-              <div class="clearfix">
-                <button type="button" class="cancelbtn">Cancel</button>
-                <button type="submit" class="signupbtn">Sign Up</button>
-              </div>
-            </div>
-          </form>
-          
+    <div class="container">
+        <form action="showgrade.php">
+      
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name..">
+      
+          <label for="studentid">Student ID</label>
+          <input type="text" id="studentid" name="studentid" placeholder="Your Student ID..">
+      
+        
+      
+          <label for="entry">Entry</label>
+          <select id="entry" name="entry">
+            <option value="Nov 2019">Nov 2019</option>
+            <option value="Aug 2019">Aug 2019</option>
+            <option value="May 2019">May 2019</option>
+          </select>
+      
+          <input type="checkbox" id="verify" name="verify" placeholder="Your Student ID..">
+          <label for="verify">Please Verify,You are seeing your own grade </label>
+      
+          <br>
+          <br>
+
+      
+          <input class="button" type="submit" value="Show Grade">
+      
+        </form>
+      </div>
 </body>
 
 </html>

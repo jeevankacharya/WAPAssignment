@@ -1,39 +1,51 @@
 .border{
 
-    width: 47%;
     padding: 2%;
     font-size: 8pt;
-    border:2px solid grey;
+    border:2px outset;
     border-radius: 10px;
     margin-left: 8px;
 }
 
-input{
-    margin-left: 16pt;
-}
-
-label.color{
-    color: red;
-}
-
-
 .background{
-    border: 2px solid grey  ;
-    border-radius: 2pt;
+    border: 2px outset  ;
+    border-radius: 7pt;
     padding: 15pt;
-    background: moccasin;
-}
-button.background{
-    background: red;
-    padding: 3pt;
+    margin-top: 3%;
+    background: #EBDEF0 ;
+
+    position: absolute;
+    z-index:1;
 }
 
-/* label {
-    clear:left;
-    text-align:right;
-    padding-right:10px;
+
+.rightmargin{
+    margin-left: 100px; 
+}
+     
+.inline{
+  display: inline-block ;
 }
 
-input, label {
-    float: right;
-} */
+
+
+ input.button {
+        background-color: red;
+        color: black;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+ }
+.textblock{
+
+    width: 87pt;
+    border: 1px solid black
+}
+
+body{
+    width: 500pt;
+    margin-left: auto;
+    margin-right: auto;
+}
