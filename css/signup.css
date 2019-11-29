@@ -50,12 +50,20 @@ body{
 
 a.color{
  color: red;   
+ font-size: 10pt;
+
 }
 
 
 img.backarrow{
     vertical-align:middle;
+
 }
 a:hover {
-    background-color: green;
+    color: blue;
   }
+
+  p.copyright{
+      font-size: 10pt;
+  }
+  
