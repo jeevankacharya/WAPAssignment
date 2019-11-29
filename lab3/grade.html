@@ -2,44 +2,51 @@
 <html lang="en">
 
 <head>
-    <title>Retrieve Grade</title>
-    <link href="../css/grade.css" type="text/css" rel="stylesheet">
+  <title>Retrieve Grade</title>
+  <link href="../css/grade.css" type="text/css" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Retrieve your grade</h1>
-    <!-- <p>Name: ...</p>
+  <h1>Retrieve your grade</h1>
+  <!-- <p>Name: ...</p>
     <p>Student ID: ...</p> Get Grade! -->
 
-    <div class="container">
-        <form action="http://mumstudents.org/params.php">
-      
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your name..">
-      
-          <label for="studentid">Student ID</label>
-          <input type="text" id="studentid" name="studentid" placeholder="Your Student ID..">
-      
-        
-      
-          <label for="assignment">Assignment</label>
-          <select id="assignment" name="assignment">
-            <option value="HW1">HW1</option>
-            <option value="HW2">HW2</option>
-            <option value="HW3">HW3</option>
-          </select>
-      
-          <input type="checkbox" id="verify" name="verify">
-          <label for="verify">Please Verify,You are seeing your own grade </label>
-      
-          <br>
-          <br>
+  <div class="container">
+    <form action="http://mumstudents.org/params.php">
 
-      
-          <input class="button" type="submit" value="Show Grade">
-      
-        </form>
-      </div>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name..">
+
+      <label for="studentid">Student ID</label>
+      <input type="text" id="studentid" name="studentid" placeholder="Your Student ID..">
+
+
+
+      <label for="assignment">Assignment</label>
+      <select id="assignment" name="assignment">
+        <option value="HW1">HW1</option>
+        <option value="HW2">HW2</option>
+        <option value="HW3">HW3</option>
+      </select>
+
+
+      <input type="radio"  name="entry" value="august2019"> August 2019
+      <input type="radio"  name="entry" value="may2019"> May 2019
+      <input type="radio"  name="entry" value="feb2019"> Feb 2019
+
+      <br>
+      <br>
+      <input type="checkbox" id="verify" name="verify">
+      <label for="verify">Please Verify,You are seeing your own grade </label>
+
+      <br>
+      <br>
+
+
+      <input class="button" type="submit" value="Show Grade">
+
+    </form>
+  </div>
 </body>
 
 </html>
