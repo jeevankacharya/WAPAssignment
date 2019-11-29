@@ -12,9 +12,7 @@
     border-radius: 7pt;
     padding: 15pt;
     margin-top: 3%;
-    background: #EBDEF0 ;
-
-    position: absolute;
+    background: #E0E0FF ;
     z-index:1;
 }
 
@@ -50,6 +48,14 @@ body{
     margin-right: auto;
 }
 
-.color{
+a.color{
  color: red;   
 }
+
+
+img.backarrow{
+    vertical-align:middle;
+}
+a:hover {
+    background-color: green;
+  }
