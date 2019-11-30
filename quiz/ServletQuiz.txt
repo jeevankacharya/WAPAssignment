@@ -33,7 +33,7 @@ Ans: The servlet container method calls the init method exactly once after insta
 
 
 7. Which of init, service, and doGet should you override? 
-Ans: doGet Method
+Ans: doGet Method ,init Method
 
 
 
