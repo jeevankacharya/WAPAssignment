@@ -1,15 +1,22 @@
 1. What is the difference between a web server and a web container?
 Ans: Web Server provides HTTP Request and HTTP Response.It handles requests from the client only through HTTP protocol.It contains web container .Web Application mostly deployed on web server .Example Servlet JSP.
 Web Container maintains the life cycle for Servlet Object.Calls the service method for that  servlet object and pass the HTTP Servlet Request and HTTP Servlet Response object.
+
+
 2. What is a servlet?
 Ans: Servlet is a class that handles requests,processes them and reply back with response .for example we can use servlet to collect input from the user through an HTML form,query the records from database and create web page dynamically.
 
+
+
 3. How do web servers and web containers interact with servlets?
-Ans:
+Ans: A web containers handles requests to the servlets .It is reponsible for managing the life cycle of servelts .
+Web servers observes that the servlet is being requested.
 
 
 4. Who creates request objects?
 Ans: Web Containers create request objects.
+
+
 
 5. What are the states in the servlet lifecycle?
 Ans: The state of servlet life cycle are:
@@ -18,16 +25,24 @@ Initializing the servlet
 Request handling
 Destroying the servlet
 
+
+
 6. Who calls init and when? 
 Ans: The servlet container method calls the init method exactly once after instantiating the servlet.The init method must complete successfully before the servlet can receive any requests.
 
+
+
 7. Which of init, service, and doGet should you override? 
-Ans: Init method.
+Ans: doGet Method
+
+
 
 
 8. In what sense are servlets multi-threaded?
 Ans: This means,that multiple requests to the same servlet may be executed at the same time.	
 
 
+
+
 9. What are the implications of this for servlet instance variables? 
-Ans: 
+Ans: The first time servlet is requested is loaded in memory and cached.Form them the same servlet instance is used with different requests being handled by different threads.Servlet is by default single instance multithread component
