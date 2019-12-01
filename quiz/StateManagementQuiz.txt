@@ -1,0 +1,54 @@
+1. Can post requests be bookmarked? What are the problems?
+Ans:  Post Request cannot be bookmarked because attempting bookmark post request just result in the GET opertaion of URL.Since a bookmark consists of only URL so all the forms paramater will be lost so the web server does not know what to do with the request.
+
+
+2. What is the purpose of request dispatching?
+Ans: Request dispacher provides the facility of dispatching the request to another resource which may be html,servlet or jsp .
+
+
+3. What is the difference between redirect and request dispatch?
+Ans: Redirect is the method of object HTTPServlerResponse.Request id directed to the client and it will process new url.
+Request Dispatch can be accessed from the HTTPSevletRequest.Servelt will internally forward the re request to another servlet or jsp page.
+
+
+4. What is an attribute ?
+Ans: An attribute is an object that is used to share information in a web app.They allows servelts to share information among themselves.
+
+
+5. What is the difference between attributes and parameters?
+Ans: Attribute is a variable of any type that is decalred directly in a class.
+Paramater is a variable defined by the function that receives a value when called.
+
+
+6. What are dangers of using attributes?
+Ans : Attributes can  be erased and  exposed outside.
+
+
+7. What does it mean to say that http is stateless? Give an example of a stateful protocol.
+Ans : HTTP is stateless protocol which means that the connection between browser and the server is lost once the transaction ends.Example of stateful protocol are FTP,Telnet.
+
+
+
+ 8.Give 5 different methods for maintaining state information (count each attribute scope as one method).
+Ans : 
+•	Hidden variables
+•	Cookies
+•	State Files
+•	SQL Server
+•	URL Paramaters
+
+9. How long does a session last?
+Ans : The session stays alive until it has been used for more than the timeout value specified in tag in deployment desscriptor file i.e web.xml.The defalt timeout value is 30 minutes.
+
+
+10. What is a cookie, and how long does a cookie last?
+Ans : Cookies are small files which are stored on a users computer which are designed to hold a modest amount of data specified to a particular client and website and can be accessed  wither by the web server or the clinet computer. The duration of cookie can be set when the cookie is created .By deafult, the cookie is destroyed when the current browser window is closed.
+
+
+11. What is the purpose of URL rewriting?
+Ans : The purpose of URL rewriting is  to append or modify any url while loading the page.
+
+
+ 12. Why does the request attribute report ‘null’ for the maintaining state demo?
+Ans : 
+
