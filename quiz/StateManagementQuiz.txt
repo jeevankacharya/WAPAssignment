@@ -50,5 +50,4 @@ Ans : The purpose of URL rewriting is  to append or modify any url while loading
 
 
  12. Why does the request attribute report ‘null’ for the maintaining state demo?
-Ans : 
-
+Ans : If the request is completed the request attribute report ‘null’ for the maintaining state demo
