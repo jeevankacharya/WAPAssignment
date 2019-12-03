@@ -1,0 +1,74 @@
+
+1. What is the main value of Java Server Pages? 
+Ans : The main value of Java Server Pages is to seperate display from processing.i.e seperate html from java.It facilites the mixing of dynamic and static web contents.
+
+
+2. How are JSP pages related to servlets?
+Ans: JSP page are compiled into java servlets.
+
+
+3. How are JSP pages related to HTML? 
+Ans: JSP allows to create dyanmically generated web pages based on HTML.
+
+
+4.Give an example of a JSP scriptlet and show how it will look in the JSP servlet .
+Ans :  Example of JSP scriplet :  < % statements %>
+          <% String username = request.getParameter("username") %>
+In Jsp Servlet 
+String username = request.getParameter("username");
+
+
+
+5. Give an example of a JSP declaration and show how it will look in the JSP servlet.
+Ans : Example of Jsp declaration : <%! Java Statments %>
+<%! private int count ; %>
+In Jsp Servlet
+private int count;
+
+
+
+6. Give an example of a JSP comment and show how it will look in the JSP servlet. 
+Ans : Jsp comment <%-- comments --%>
+Example : <%-- This is comment --%>
+In Jsp Servlet comment is ignored.
+
+
+
+7. Give an example of a JSP expression and show how it will look in the JSP servlet. 
+Ans :  JSP Expression : <%= JavaExpression %>
+Example : <% = Math.sqrt(5) %>
+In Jsp Servlet ,
+out.print(Math.sqrt(5));
+
+
+
+8. Give an example of a JSP directive and show how it will look in the JSP servlet. 
+Ans :  JSP Directive : <%@ directiveName attrubute1="attribute1Value" attribute2 ="attribute2Value ..." %>
+Example : <% page lanaguage ="java" contentType ="text/html" %>
+
+
+
+9. Explain how an EL expression is evaluated.
+Ans: EL makes easily access application data stored in JavaBeans components.
+Let us take an example ${something}
+container evaluates this as follows.
+•	checks page scope for "something" if found use it
+•	otherwise check request scope for an attribute named "something"
+•	otherwise check session scope for an attribute named "something"
+•	otherwise check application scope for an attribute name "something"
+•	otherwise ignore the expression.
+
+
+10. Explain how servlet attributes are involved in EL expressions.
+Ans: When data is stored on any scope  i.e on pageScope ,SessionScope,requestScope,applicationScope then they can be accessed in jsp by 
+{scopetype.key}
+Example : 
+String name ="Jeevan";
+request.setAttribute("firstname",name)
+IN JSP, can be accessed by 
+${requestScope.firstname}
+
+
+
+11. Explain how servlets and JSPs use request dispatch to interact. 
+Ans : Let us take an example 
