@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JSP Custom Tag Quiz</title>
+    </head>
+
+    <body>
+        <p><strong>1. Rewrite the JSP page in the first demo (forEach) to use scripting instead of the JSTL forEach.</strong></p>
+<p>Ans : Using scripting&nbsp;</p>
+<p>&lt;% List numbers = (List)request.getAttrute(numbers) ;</p>
+<p>for(String num: numbers){</p>
+<p>out.print(num + "&lt;br/&gt;")</p>
+<p>}</p>
+<p>%&gt;</p>
+<p>
+  <br>
+</p>
+<p>
+  <br>
+</p>
+<p><strong>2. How do custom tags relate to JSTL? </strong></p>
+<p>Ans : JSTL stands for Java server pages standard tag library, and it is a collection of custom JSP tag libraries that 
+    provide common web development functionality.
+    Similary Custom Tag is a user defined langauge element which provides functionlaity same as JSTL</p>
+<p>
+  <br>
+</p>
+<p>
+  <br>
+</p>
+<p><strong>3. What is the role of the URI in the TLD and the taglib directive? </strong></p>
+<p>Ans : The uri element in TLD is a unique name for tag library.</p>
+<p>
+  <br>
+</p>
+<p><strong>4. What is a tag handler class?</strong></p>
+<p>Ans : Tag handler class is the one which extends tag support framework class&nbsp;</p>
+<p>-– javax.servlet.jsp.tagext.TagSupport</p>
+<p>A tag handler has access to the api that allows it to communicate with the JSP pages.</p>
+<p>
+  <br>
+</p>
+<p><strong>5. What is the role of attribute setters in a tag handler class? </strong></p>
+<p>Ans: &nbsp;Main role of tag attribute is to pass information to the tag handler and customize its behaviour.</p>
+<p>
+  <br>
+</p>
+<p><strong>6. What is the role of the doTag() method in a tag handler class? </strong></p>
+<p>Ans: All tag logic,iterations and body evaluations oocur in this method.</p>
+<p>
+  <br>
+</p>
+<p><strong>7.What does the operation getJspContext().getOut().write(“Hi Bob”) do when called in a doTag() method?</strong></p>
+<p>Ans :The doTag() method takes the current JSP context object using the getJSPContext() method and uses it to send "Hi Bob" to the current JSPWriter Object.</p>
+<p>
+  <br>
+</p>
+<p><strong>8. What does the operation getJspBody().invoke(null) do when called in a doTag() method? &nbsp;</strong></p>
+<p>Ans : When getJspBody().invoke(null) is called, it is the output resulting &nbsp;from the execution of the tag body's JSP content that gets passes to the client, not the JSP code itself.</p>
+    </body>
+</html>
