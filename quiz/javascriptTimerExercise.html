@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Timer Exercise</title>
+</head>
+
+<body>
+
+    <p><strong>1. What is the difference between the following 2 statements?</strong></p>
+    <p><strong>setTimeout(booyah, 2000);</strong></p>
+    <p><strong>setTimeout(booyah(), 2000);</strong></p>
+    <p><strong>Ans :&nbsp;</strong>In setTimeout(booyah, 2000) &nbsp;, function booyah is called after 2000 ms&nbsp;</p>
+    <p>But in setTimeout(booyah(), 2000) , function booyah is called immediately neglating the timer.</p>
+    <p>
+        <br>
+    </p>
+    <p><strong>2. What do the following 2 alerts display (answer without running the code)?</strong></p>
+    <p><strong>var myfunc = function(a, x) {</strong></p>
+    <p><strong>&nbsp;return a * x;</strong></p>
+    <p><strong>};</strong></p>
+    <p><strong>var x = myfunc(2, 3);</strong></p>
+    <p><strong>var y = myfunc;</strong></p>
+    <p><strong>alert(x);</strong></p>
+    <p><strong>alert(y(2,3));&nbsp;</strong></p>
+    <p><strong>
+            <br>
+        </strong></p>
+    <p><strong>Ans :</strong> In above code , the value of x is calculated as 6 then my function is assigned in var y
+        .Alert Dialog 6 is produced on alert(x).Alert Dialog 6 is produced in alert(y(2,3)).</p>
+    <p>Answer is 6 for both alert .</p>
+    <p>
+        <br>
+    </p>
+    <p><strong>3. Write functions booyah1 and booyah2 so that in both cases below, an alert box comes up after 2 seconds
+            that</strong></p>
+    <p><strong>says “BOOYAH!”</strong></p>
+    <p><strong>setTimeout(booyah1, 2000);</strong></p>
+    <p><strong>setTimeout(booyah2(), 2000);</strong></p>
+    <p><strong>Ans: </strong></p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; function booyah1(){</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alert("BOOYAH!");</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; function booyah2(){</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;setTimeout(function ()</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alert(‘BOOYAH!’);</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; }, 2000);</p>
+    <p>&nbsp;}</p>
+    <p>
+        <br>
+    </p>
+    <p><strong>4. What is "Unobtrusive Javascript"? What is the practical application of Unobtrusive Javascript (and the
+            reasons for using it)?</strong></p>
+    <p>Ans: Unobtrusive Javascript is the methodology for attaching javascript to the front end of website.Unobtrusive
+        JavaScript, attaches element directly by their ID or class, in the presence of the other attributes.So that all
+        the responsibilites will be in javascript file.Due to this there is no any problems like loading files.</p>
+</body>
+
+</html>
