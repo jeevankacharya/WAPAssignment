@@ -2,7 +2,7 @@ function calcTip() {
 	//var subtotalElem = 
 	//var tipElem = 
 	var totalElem = document.getElementById('total');
-    var subtotal = document.getElementById('subtotal').value;
+	var subtotal = document.getElementById('subtotal').value;
 
     console.log("subtotal" + subtotal);
 
