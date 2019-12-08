@@ -32,12 +32,17 @@ fieldset{
     margin-left: auto;
     float: left;
     display: block;
-
     margin-right: 5pt;
 }
 
-div{
+div.button{
     margin-right: auto;
     margin-left: auto;
     width: 50%;
+}
+
+footer.validator{
+    float:right;
+
+    
 }
