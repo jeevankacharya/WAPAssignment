@@ -1,4 +1,3 @@
-
 var start, stop, animation, size, speed, textarea, animationvalue = "Blank", delay = 250, interval, fontsize = "7pt";
 var splittext = "=====\n", currentPosition = 0;
 
@@ -40,13 +39,11 @@ function onStop() {
     animation.disabled = false;
     currentPosition = 0;
     clearInterval(interval);
-
 }
 
 function onAnimationSelect() {
     this.animationvalue = animation.options[animation.selectedIndex].value;
     this.textarea.value = ANIMATIONS[this.animationvalue];
-
 }
 
 function onSizeSelect() {

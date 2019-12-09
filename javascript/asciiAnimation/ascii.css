@@ -38,7 +38,7 @@ fieldset{
 div.button{
     margin-right: auto;
     margin-left: auto;
-    width: 50%;
+    width: fit-content;
 }
 
 footer.validator{
