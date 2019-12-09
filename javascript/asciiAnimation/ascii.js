@@ -45,6 +45,7 @@ function onStop() {
 
 function onAnimationSelect() {
     this.animationvalue = animation.options[animation.selectedIndex].value;
+    this.textarea.value = ANIMATIONS[this.animationvalue];
 
 }
 
