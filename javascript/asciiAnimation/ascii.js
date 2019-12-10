@@ -1,5 +1,7 @@
-var start, stop, animation, size, speed, textarea, animationvalue = "Blank", delay = 250, interval, fontsize = "7pt";
-var splittext = "=====\n", currentPosition = 0;
+    var start, stop, animation, size, speed, textarea, animationvalue = "Blank", delay = 250, interval, fontsize = "7pt";
+    var splittext = "=====\n", currentPosition = 0;
+
+
 
 window.onload = function () {
     start = document.getElementById('start');
