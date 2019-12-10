@@ -45,8 +45,8 @@ Ans:
 
 function multiply(){
         var result=1;
-        for(int i=0;i<arguments.lenth;i++){
-            result = result* arguments[i];
+        for(int i=0;i<arguments.length;i++){
+            result = result * arguments[i];
         }
         return result;
 }
