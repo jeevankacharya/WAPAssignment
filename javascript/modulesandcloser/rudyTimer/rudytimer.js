@@ -1,12 +1,11 @@
-function rudyTimer() {
-    var rt = rudy();
-    rt.delaytimer;
-}
 
-var rudy = function () {
-    var timer = null;
+var timer = null;
+
+var rudy = (function () {
+
 
     function delayMsg2() {
+
         if (timer === null) {
             timer = setInterval(rudy, 1000);
         } else {
@@ -18,5 +17,13 @@ var rudy = function () {
     function rudy() { // called each time the timer goes off
         document.getElementById("output").innerHTML += "Rudy!";
     }
-    return { delaytimer: delayMsg2 };
+    return {
+        delaytimer: delayMsg2 ()
+    };
+})
+
+function rudyTimer() {
+
+    var rt = rudy();
+    rt.delaytimer;
 }
