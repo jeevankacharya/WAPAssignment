@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Module Exercise</title>
+  </head>
+
+  <body>
+    <p><strong>1. Determine what this Javascript code will print out (without running it):</strong></p>
+    <p><strong>x = 1;</strong></p>
+    <p><strong>var a = 5;</strong></p>
+    <p><strong>var b = 10;</strong></p>
+    <p><strong>var c = function(a, b, c) {</strong></p>
+    <p><strong>&nbsp; &nbsp; document.write(x);</strong></p>
+    <p><strong>&nbsp; &nbsp; document.write(a);</strong></p>
+    <p><strong>&nbsp; &nbsp; var f = function(a, b, c) {</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; b = a;</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; document.write(b);</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; b = c;</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; var x = 5;</strong></p>
+    <p><strong>&nbsp; &nbsp; }</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; f(a,b,c);</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; document.write(b);</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; var x = 10;</strong></p>
+    <p><strong>&nbsp;}</strong></p>
+    <p><strong>c(8,9,10);</strong></p>
+    <p><strong>document.write(b);</strong></p>
+    <p><strong>document.write(x);&nbsp;</strong></p>
+    <p><strong>
+        <br>
+      </strong></p>
+    <p><strong>
+        <br>
+      </strong></p>
+    <p><strong>Ans :</strong> Output is 10,8,8,9,10,1 respectively.</p>
+    <p>
+      <br>
+    </p>
+    <p>
+      <br>
+    </p>
+    <p><strong>2. Define Global Scope and Local Scope in Javascript.</strong></p>
+    <p>Ans : Any variable declared outside the function belongs to global Scope and accessible from anywhere in code and any variable decalred within &nbsp;the function and is only accessible from that function and nested function belongs to local scope</p>
+    <p>
+      <br>
+    </p>
+    <p><strong>3. Consider the following structure of Javascript code:</strong></p>
+    <p><strong>// Scope A</strong></p>
+    <p><strong>function XFunc () {</strong></p>
+    <p><strong>&nbsp; &nbsp; // Scope B</strong></p>
+    <p><strong>function YFunc () {</strong></p>
+    <p><strong>&nbsp; &nbsp; // Scope C</strong></p>
+    <p><strong>};</strong></p>
+    <p><strong>};</strong></p>
+    <p><strong>(a) Do statements in Scope A have access to variables defined in Scope B and C?</strong></p>
+    <p><strong>(b) Do statements in Scope B have access to variables defined in Scope A?</strong></p>
+    <p><strong>(c) Do statements in Scope B have access to variables defined in Scope C?</strong></p>
+    <p><strong>(d) Do statements in Scope C have access to variables defined in Scope A?</strong></p>
+    <p><strong>(e) Do statements in Scope C have access to variables defined in Scope B?</strong></p>
+    <p>
+      <br>
+    </p>
+    <p><strong>Ans :</strong> False,True,False,True,True</p>
+    
+    <br>
+    <p><strong>4. What will be printed by the following (answer without running it)?</strong></p>
+    <p><strong>var x = 9;</strong></p>
+    <p><strong>function myFunction() {</strong></p>
+    <p><strong>&nbsp; &nbsp; return x * x;</strong></p>
+    <p><strong>&nbsp; &nbsp; }</strong></p>
+    <p><strong>document.write(myFunction());</strong></p>
+    <p><strong>x = 5;</strong></p>
+    <p><strong>document.write(myFunction());</strong></p>
+    <p><strong>
+        <br>
+      </strong></p>
+    <p><strong>Ans :</strong> Output is 81 and 25;</p>
+    <p>
+      <br>
+    </p>
+    <p><strong>5.</strong></p>
+    <p><strong>var foo = 1;</strong></p>
+    <p><strong>function bar() {</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp;if (!foo) {</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; var foo = 10;</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp;}</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; alert(foo);</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp;}</strong></p>
+    <p><strong>bar();</strong></p>
+    <p><strong>What will the alert print out? (Answer without running the code. Remember ‘hoisting’.)?</strong></p>
+    <p><strong>
+        <br>
+      </strong></p>
+    <p><strong>Ans:</strong>&nbsp; Alert print 10;</p>
+    <p>
+      <br>
+    </p>
+    <p>
+      <br>
+    </p>
+    <p><strong>6. Consider the following definition of an add( ) function to increment a counter variable:</strong></p>
+    <p><strong>var add = (function () {</strong></p>
+    <p><strong>&nbsp; &nbsp; var counter = 0;</strong></p>
+    <p><strong>&nbsp; &nbsp; return function () {</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; return counter += 1;</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; }</strong></p>
+    <p><strong>&nbsp;})();</strong></p>
+    <p><strong>Modify the above module to define a count object with two methods: add( ) and reset( ). The count.add( ) method&nbsp;</strong><strong>adds one to the counter (as above). The count.reset( ) method sets the counter to 0.</strong></p>
+    <p><strong>Ans:&nbsp;</strong></p>
+    <p>var count = (function(){</p>
+    <p>&nbsp; &nbsp; var counter = 0;</p>
+    <p>&nbsp; &nbsp; function add(){</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; return counter+=1;</p>
+    <p>&nbsp; &nbsp; }</p>
+    <p>&nbsp; &nbsp;function reset(){</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; counter=0;</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; return counter;</p>
+    <p>&nbsp; &nbsp; }</p>
+    <p>&nbsp; &nbsp; return{</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; add:add,</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; reset: reset</p>
+    <p>&nbsp; &nbsp; }</p>
+    <p>})();</p>
+    <p>
+      <br>
+    </p>
+    <p><strong>7. In the definition of add( ) shown in question 6, identify the "free" variable. In the context of a&nbsp;</strong></p>
+    <p><strong>function closure,</strong></p>
+    <p><strong>what is a "free" variable?</strong></p>
+    <p>
+      <br>
+    </p>
+    <p><strong>Ans:</strong> Free Variable &nbsp;is counter;</p>
+    <p>
+      <br>
+    </p>
+    <p><strong>8. The add( ) function defined in question 6 always adds 1 to the counter each time it is called. Write a definition</strong></p>
+    <p><strong>of a function make_adder(inc), whose return value is an add function with increment value inc (instead of 1). Here</strong></p>
+    <p><strong>is an example of using this function:</strong></p>
+    <p><strong>add5 = make_adder(5);</strong></p>
+    <p><strong>add5( ); add5( ); add5( ); // final counter value is 15</strong></p>
+    <p><strong>
+        <br>
+      </strong></p>
+    <p><strong>add7 = make_adder(7);</strong></p>
+    <p><strong>add7( ); add7( ); add7( ); // final counter value is 21</strong></p>
+    <p><strong>
+        <br>
+      </strong></p>
+    <p><strong>Ans :&nbsp;</strong></p>
+    <p>var make_adder = function(value){</p>
+    <p>&nbsp; &nbsp; var counter = 0;</p>
+    <p>&nbsp;&nbsp;</p>
+    <p>&nbsp;&nbsp;</p>
+    <p>&nbsp; &nbsp; return function(){</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return counter = counter+value;</p>
+    <p>&nbsp; &nbsp; &nbsp; }</p>
+    <p>};</p>
+    <p>add5 = make_adder(5);</p>
+    <p>add5( ); add5( ); add5( );</p>
+    <p>
+      <br>
+    </p>
+    <p>add7 = make_adder(7);</p>
+    <p>add7( ); add7( ); add7( );</p>
+    <br>
+    <p><strong>9. Suppose you are given a file of Javascript code containing a list of many function and variable declarations. All of&nbsp;</strong><strong>these function and variable names will be added to the Global Javascript namespace. What simple modification to&nbsp;</strong><strong>the Javascript file can remove all the names from the Global namespace?</strong></p>
+    <p><strong>
+        <br>
+      </strong></p>
+    <p><strong>Ans:</strong> Using <span style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">&nbsp;module pattern,&nbsp;</span>can remove all the names from the Global namespace.</p>
+    <p>
+      <br>
+    </p>
+    <p><strong>10. Using the Revealing Module Pattern, write a Javascript definition of a Module that creates an Employee Object</strong></p>
+    <p><strong>with the following fields and methods:</strong></p>
+    <p><strong>Private Field: name</strong></p>
+    <p><strong>Private Field: age</strong></p>
+    <p><strong>Private Field: salary</strong></p>
+    <p><strong>Public Method: setAge(newAge)</strong></p>
+    <p><strong>Public Method: setSalary(newSalary)</strong></p>
+    <p><strong>Public Method: setName(newName)</strong></p>
+    <p><strong>Private Method: getAge( )</strong></p>
+    <p><strong>Private Method: getSalary( )</strong></p>
+    <p><strong>Private Method: getName( )</strong></p>
+    <p><strong>Public Method: increaseSalary(percentage) // uses private getSalary( )</strong></p>
+    <p><strong>Public Method: incrementAge( ) // uses private getAge( )</strong></p>
+    <p><strong>Ans :</strong>&nbsp;</p>
+    <p>var Employee = (function(){</p>
+    <p>&nbsp;var name,age,salary;</p>
+    <p>
+      <br>
+    </p>
+    <p>&nbsp; function getName(){</p>
+    <p>&nbsp; &nbsp; return this.name;</p>
+    <p>&nbsp; }</p>
+    <p>
+      <br>
+    </p>
+    <p>&nbsp; function setName(newname){</p>
+    <p>&nbsp; &nbsp; this.name = newname;</p>
+    <p>&nbsp; }</p>
+    <p>
+      <br>
+    </p>
+    <p>&nbsp; function getAge(){</p>
+    <p>&nbsp; &nbsp;return this.age;</p>
+    <p>&nbsp; }</p>
+    <p>
+      <br>
+    </p>
+    <p>&nbsp; function setAge(newage){</p>
+    <p>&nbsp; &nbsp; this.age = newage;</p>
+    <p>&nbsp; }</p>
+    <p>
+      <br>
+    </p>
+    <p>&nbsp; function getSalary(){</p>
+    <p>&nbsp; &nbsp;return this.salary;</p>
+    <p>&nbsp; }</p>
+    <p>
+      <br>
+    </p>
+    <p>&nbsp; function setSalary(newSalary){</p>
+    <p>&nbsp; &nbsp; this.salary = newSalary;</p>
+    <p>&nbsp; &nbsp;}</p>
+    <p>
+      <br>
+    </p>
+    <p>&nbsp; function increaseSalary(percentage){</p>
+    <p>&nbsp; &nbsp; setSalary(getSalary()+ &nbsp;getSalary() * salary/100);</p>
+    <p>&nbsp; }</p>
+    <p>
+      <br>
+    </p>
+    <p>
+      <br>
+    </p>
+    <p>&nbsp; function increamentAge(inc){</p>
+    <p>&nbsp; &nbsp; setAge(getAge()+inc);</p>
+    <p>&nbsp; }</p>
+    <p>
+      <br>
+    </p>
+    <p>&nbsp; return {</p>
+    <p>&nbsp; &nbsp; setAge:setAge,</p>
+    <p>&nbsp; &nbsp; setSalary:setSalary,</p>
+    <p>&nbsp; &nbsp; setName:setName,</p>
+    <p>&nbsp; &nbsp; increaseSalary: increaseSalary,</p>
+    <p>&nbsp; &nbsp; incrementAge: increamentAge</p>
+    <p>
+      <br>
+    </p>
+    <p>&nbsp; }</p>
+    <p>})();</p>
+    <p>
+      <br>
+    </p>
+    <p><strong>
+        <br>
+      </strong></p>
+    <p><strong>11. Rewrite your answer to Question 10 using the Anonymous Object Literal Return Pattern.</strong></p>
+    <p><strong>Ans :</strong></p>
+    <p>var Employee = (function(){</p>
+    <p>&nbsp;var name,age,salary;</p>
+    <p>
+      <br>
+    </p>
+    <p>&nbsp; var getName = function(){</p>
+    <p>&nbsp; &nbsp; return this.name;</p>
+    <p>&nbsp; }</p>
+    <p>
+      <br>
+    </p>
+    <p>&nbsp;</p>
+    <p>&nbsp; var getAge = function(){</p>
+    <p>&nbsp; &nbsp; return this.age;</p>
+    <p>&nbsp; }</p>
+    <p>
+      <br>
+    </p>
+    <p>&nbsp; var getSalary = function getSalary(){</p>
+    <p>&nbsp; &nbsp; return this.salary;</p>
+    <p>&nbsp; }</p>
+    <p>
+      <br>
+    </p>
+    <p>
+      <br>
+    </p>
+    <p>&nbsp; return {</p>
+    <p>&nbsp; &nbsp; setAge:function (newage){</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;this.age = newage;</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p>
+    <p>&nbsp; &nbsp; setSalary:function(newSalary){</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.salary = newSalary;</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p>
+    <p>&nbsp; &nbsp; setName: function(newname){</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.name = newname;</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p>
+    <p>&nbsp; &nbsp; increaseSalary: &nbsp;function(percentage){</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;setSalary(getSalary()+ &nbsp;getSalary() * salary/100);</p>
+    <p>
+      <br>
+    </p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p>
+    <p>&nbsp; &nbsp; incrementAge: function(inc){</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;setAge(getAge()+inc);</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+    <p>
+      <br>
+    </p>
+    <p>&nbsp; };</p>
+    <p>})();</p>
+    <p><strong>12. Rewrite your answer to Question 10 using the Locally Scoped Object Literal Pattern.</strong></p>
+    <p><strong>Ans :</strong></p>
+    <p>var Employee = (function(){</p>
+    <p>&nbsp;var name,age,salary;</p>
+    <p>// locally scoped Object</p>
+    <p>&nbsp; var employeeObject = {};</p>
+    <p>
+      <br>
+    </p>
+    <p>&nbsp; var getName = function(){</p>
+    <p>&nbsp; &nbsp; return this.name;</p>
+    <p>&nbsp; }</p>
+    <p>
+      <br>
+    </p>
+    <p>&nbsp; var getAge = function(){</p>
+    <p>&nbsp; &nbsp; return this.age;</p>
+    <p>&nbsp; }</p>
+    <p>
+      <br>
+    </p>
+    <p>&nbsp; var getSalary = function getSalary(){</p>
+    <p>&nbsp; &nbsp; return this.salary;</p>
+    <p>&nbsp; }</p>
+    <p>
+      <br>
+    </p>
+    <p>&nbsp; employeeObject.setAge = function (newage){</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;this.age = newage;</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</p>
+    <p>
+      <br>
+    </p>
+    <p>&nbsp; employeeObject.setSalary= function(newSalary){</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.salary = newSalary;</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp;}</p>
+    <p>
+      <br>
+    </p>
+    <p>&nbsp; employeeObject.setName = function(newname){</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.name = newname;</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</p>
+    <p>
+      <br>
+    </p>
+    <p>&nbsp; employeeObject.increaseSalary = &nbsp;function(percentage){</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; salary = salary+ &nbsp;percentage * salary/100;</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; getSalary();</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+    <p>
+      <br>
+    </p>
+    <p>&nbsp; employeeObject.incrementAge = function(){</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; age= age+1;</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; getAge();</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+    <p>&nbsp; return employeeObject;</p>
+    <p>})();</p>
+    <p>
+      <br>
+    </p>
+    <p><strong>13. Write a few Javascript instructions to extend the Module of Question 10 to have a public address field and</strong></p>
+    <p><strong>public methods setAddress(newAddress) and getAddress( ).</strong></p>
+    <p><strong>Ans :&nbsp;</strong></p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Employee.address = “Fairfield”;</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Employee.setAddress = function(a) {</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.address = a;</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Employee.getAddress = function() {</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return this.address;</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+    <p><strong>14. What is the output of the following code?</strong></p>
+    <p><strong>
+        <br>
+      </strong></p>
+    <p><strong>const promise = new Promise((resolve, reject) =&gt; {</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; reject(“Hattori”);</strong></p>
+    <p><strong>});</strong></p>
+    <p><strong>promise.then(val =&gt; alert(“Success: “ + val))</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp;.catch(e =&gt; alert(“Error: “ + e)</strong></p>
+    <p><strong>
+        <br>
+      </strong></p>
+    <p>Ans: It’s going to execute the promise and return an alert with “Error: Hattori”</p>
+    <p>
+      <br>
+    </p>
+    <p><strong>15. What is the output of the following code?</strong></p>
+    <p><strong>&nbsp; const promise = new Promise((resolve, reject) =&gt; {</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; resolve(“Hattori”);</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; setTimeout(()=&gt; reject(“Yoshi”), 500);</strong></p>
+    <p><strong>&nbsp; });</strong></p>
+    <p><strong>&nbsp; promise.then(val =&gt; alert(“Success: “ + val))</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.catch(e =&gt; alert(“Error: “ + e));</strong></p>
+    <p><strong>Ans:</strong> It’s going to show an alert with “Success Hattori” and 500 mili seconds after it s going to show an alert with “Error: Yoshi”</p>
+    <br>
+    <p><strong>16. What is the output of the following code?</strong></p>
+    <p><strong>
+        <br>
+      </strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; function job(state) {</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return new Promise(function(resolve, reject) {</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (state) {</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; resolve('success');</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else {</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; reject('error');</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; }</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; let promise = job(true);</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; promise.then(function(data) {</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console.log(data);</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return job(false);</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; }).catch(function(error) {</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console.log(error);</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return 'Error caught';</strong></p>
+    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; });</strong>&nbsp; &nbsp;&nbsp;</p>
+    <p><strong>Ans:</strong> Print Success in console;</p>
+
+  </body>
+</html>
