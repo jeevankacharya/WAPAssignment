@@ -2,7 +2,7 @@ var isEnter = false;
 $(document).ready(function () {
 
     $("#start").click(function () {
-        $(".boundary").css("background-color", "#eeeeee");
+        $(".boundary").removeClass("youlose");
         $("#status").text("Move the mouse without touching boundary");
         isEnter = true;
     });
@@ -10,7 +10,7 @@ $(document).ready(function () {
     $(".boundary").mouseenter(function () {
         if (isEnter == true) {
             $("#status").text("You Lose !");
-            $(".boundary").css("background-color", "red");
+            $(".boundary").addClass("youlose");
             isEnter = false;
         }
     });
