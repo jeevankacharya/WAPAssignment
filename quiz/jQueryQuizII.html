@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JQuery Quiz II</title>
+    </head>
+
+    <body>
+        <p><strong>1. Which, if any, of the following 3 code fragments are equivalent? Explain why they are different, if</strong></p>
+<p><strong>they are. Explain why they can have different parameters and be equivalent, if they are equivalent.</strong></p>
+<p><strong>
+    <br>
+  </strong></p>
+<p><strong>//code fragment 1</strong></p>
+<p><strong>$("li").each(function(idx, e) {</strong></p>
+<p><strong>&nbsp;$(e).css(“color”, “yellow”); });</strong></p>
+<p><strong>
+    <br>
+  </strong></p>
+<p><strong>//code fragment 2</strong></p>
+<p><strong>$("li").each(function() {</strong></p>
+<p><strong>&nbsp;$(this).css(“color”, “yellow”); });</strong></p>
+<p><strong>
+    <br>
+  </strong></p>
+<p><strong>//code fragment 3</strong></p>
+<p><strong>$("li").each(function(idx) {</strong></p>
+<p><strong>&nbsp;$(this).css(“color”, “yellow”); });</strong></p>
+<p><strong>
+    <br>
+  </strong></p>
+<p><strong>&nbsp;Ans :</strong> All are equivalent because in, all the fragment JQuery function changes the every list element&nbsp;</p>
+<p>&nbsp;color to yellow</p>
+<br>
+<p><strong> 2. Write a jQuery expression to find all divs on a page that include an unordered list in them, and make</strong></p>
+<p><strong>their text color be blue.</strong></p>
+<p><strong>&nbsp;&lt;div&gt;no ul here &lt;/div&gt;</strong></p>
+<p><strong>&nbsp;&lt;div&gt;</strong></p>
+<p><strong>&nbsp; &nbsp; This does contain a ul.</strong></p>
+<p><strong>&nbsp; &nbsp; &lt;ul&gt;</strong></p>
+<p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;the first item&lt;/li&gt;</strong></p>
+<p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;the second item&lt;/li&gt;</strong></p>
+<p><strong>&nbsp; &nbsp; &lt;/ul&gt;</strong></p>
+<p><strong>&lt;/div&gt;</strong></p>
+<p><strong>&nbsp;&lt;script&gt;</strong></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;!—INSERT YOUR JQUERY CODE HERE - - &gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; $(document).ready(function(){</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $("div ul li").css("color","blue");</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; });</p>
+<p>&nbsp;<strong>&lt;/script&gt;</strong></p>
+<p><strong>&nbsp;&lt;/body&gt;</strong></p>
+<p>
+  <br>
+</p>
+
+<p>&nbsp;<strong>3. Write jQuery code to append the following div element (and all of its contents) dynamically to the body</strong></p>
+<p><strong>element.</strong></p>
+<p><strong>&lt;div&gt;&lt;h1&gt;JQuery Core&lt;/h1&gt;&lt;/div&gt;</strong></p>
+<p><strong>HTML:</strong></p>
+<p><strong>&nbsp;&lt;!DOCTYPE html&gt;</strong></p>
+<p><strong>&nbsp;&lt;html&gt;</strong></p>
+<p><strong>&nbsp;&lt;head&gt;</strong></p>
+<p><strong>&nbsp;&lt;meta charset="utf-8"&gt;</strong></p>
+<p><strong>&nbsp;&lt;title&gt;JS Bin&lt;/title&gt;</strong></p>
+<p><strong>&nbsp;&lt;/head&gt;</strong></p>
+<p><strong>&nbsp;&lt;body&gt;</strong></p>
+<p><strong>&nbsp;&lt;/body&gt;</strong></p>
+<p><strong>&nbsp;&lt;/html&gt;&nbsp;</strong></p>
+<br>
+<p><strong>&nbsp;Ans :</strong></p>
+<p>&nbsp;$(document).ready(function(){</p>
+<p>&nbsp; &nbsp; $("body").append("&lt;div&gt;&lt;h1&gt;JQuery Core&lt;/h1&gt;&lt;/div&gt;");</p>
+<p>&nbsp;});</p>
+    </body>
+</html>
+<!-- http://harmanani.github.io/classes/csc443/Notes/Lecture14.pdf
+https://api.jquery.com/category/selectors/ -->
+
